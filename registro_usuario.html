@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <!-- Agrega enlaces a los archivos CSS de Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar con clase container para hacerlo más ancho y altura personalizada -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <span class="navbar-brand mb-0 h1">Formulario de Registro</span>
+  </div>
+</nav>
+
+<!-- Contenedor del formulario -->
+<div class="container mt-4">
+  
+  <form>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+    </div>
+    <div class="form-group">
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos">
+    </div>
+    <div class="form-group">
+      <label for="direccion">Dirección:</label>
+      <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección">
+    </div>
+    <div class="form-group">
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
+    </div>
+    <div class="form-group">
+      <label for="celular">Número de celular:</label>
+      <input type="tel" class="form-control" id="celular" placeholder="Ingresa tu número de celular">
+    </div>
+    <div class="form-group">
+      <label for="dni">DNI:</label>
+      <input type="text" class="form-control" id="dni" placeholder="Ingresa tu DNI">
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+<!-- Agrega enlaces a los archivos JS de Bootstrap y jQuery al final del body -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
