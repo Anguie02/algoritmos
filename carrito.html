@@ -18,19 +18,17 @@
       Productos Seleccionados
     </button>
     <div class="dropdown-menu">
-      <!-- Lista de productos seleccionados con cantidad y precio total -->
-      <ul id="selectedProducts" class="list-group mb-2"></ul>
-
-      <!-- Formulario para ingresar cantidad y mostrar precio total -->
-      <form id="checkoutForm">
-        <div class="form-group">
-          <label for="quantity">Cantidad:</label>
-          <input type="number" class="form-control" id="quantity" required>
-        </div>
-        <div class="form-group">
-          <label for="totalPrice">Precio Total:</label>
-          <input type="text" class="form-control" id="totalPrice" readonly>
-        </div>
+        <!-- Lista de productos seleccionados con cantidad y precio total -->
+        <ul id="selectedProducts" class="list-group mb-2">
+          <!-- Aquí se agregarán dinámicamente los productos -->
+        </ul>
+  
+        <!-- Formulario para ingresar cantidad y mostrar precio total -->
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label for="totalPrice">Precio Total:</label>
+            <input type="text" class="form-control" id="totalPrice" readonly>
+          </div>
         <button type="button" class="btn btn-success" id="payButton">Pagar</button>
         <button type="button" class="btn btn-danger" id="cancelButton">Cancelar</button>
       </form>
@@ -59,5 +57,26 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!-- Tu archivo JavaScript personalizado -->
 <script src="ruta/a/tu/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Ejemplo de cómo agregar productos dinámicamente
+      const products = ['Producto 1', 'Producto 2', 'Producto 3'];
+  
+      const selectedProductsList = document.getElementById('selectedProducts');
+      
+      products.forEach((product) => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-group-item');
+        listItem.innerHTML = `
+          ${product}
+          <div class="form-inline float-right">
+            <label for="${product}-quantity" class="mr-2">Cantidad:</label>
+            <input type="number" class="form-control mr-2" id="${product}-quantity" value="1">
+          </div>
+        `;
+        selectedProductsList.appendChild(listItem);
+      });
+    });
+  </script>
 </body>
 </html>
