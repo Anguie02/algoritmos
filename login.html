@@ -6,17 +6,26 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="script_de_autenticacion.php" method="post">
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required>
+    <div class="container mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-center">Login</h2>
+                    <form action="procesar_autenticacion.php" method="post">
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" class="form-control" id="correo" name="correo" required>
+                        </div>
 
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
+                        <div class="form-group">
+                            <label for="contrasena">Contraseña:</label>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                        </div>
 
-            <button type="submit">Iniciar sesión</button>
-        </form>
-    </div>
+                        <button type="submit" class="btn btn-success btn-block">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
