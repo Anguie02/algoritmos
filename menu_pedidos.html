@@ -109,7 +109,36 @@
     </div>
 </div>
 
-<!-- Agrega enlaces a los archivos JS de Bootstrap y jQuery al final del body -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Variables para el carrito
+      let cartCount = 0;
+      const cartCountElement = document.querySelector('.cart-count');
+      const cartListElement = document.querySelector('.cart-list');
+
+      // Función para agregar productos al carrito
+      function addToCart(productTitle) {
+          cartCount++;
+          cartCountElement.textContent = cartCount;
+
+          // Agregar el producto a la lista del carrito
+          const listItem = document.createElement('li');
+          listItem.textContent = productTitle;
+          cartListElement.appendChild(listItem);
+      }
+
+      // Evento click para los botones "Agregar"
+      const addButtonElements = document.querySelectorAll('.btn-primary');
+      addButtonElements.forEach(function (button) {
+          button.addEventListener('click', function () {
+              const productTitle = this.parentNode.querySelector('.card-title').textContent;
+              addToCart(productTitle);
+          });
+      });
+  });
+</script>
+
+<!-- Enlaces a los archivos JS de Bootstrap y jQuery-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
