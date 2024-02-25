@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $correo = $_POST["correo"];
     $contrasena_ingresada = $_POST["contrasena"];
 
-    // Conectar a la base de datos (reemplaza los valores con los de tu configuración)
+    // Conectar a la base de datos 
     $servername = "localhost";
     $username = "root";
     $password = "";
