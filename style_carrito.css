@@ -1,0 +1,32 @@
+/* Estilo para el contenedor del carrito en el navbar */
+  .cart-container {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Color del texto del carrito */
+    font-size: 20px; /* Tamaño del texto del carrito */
+    margin-right: 20px; /* Espaciado a la derecha del carrito */
+  }
+
+  /* Estilo para el ícono del carrito */
+  .fa-shopping-cart {
+    margin-right: 5px; /* Espaciado entre el ícono y el contador del carrito */
+  }
+
+  /* Estilo para el contador del carrito */
+  .cart-count {
+    background-color: #f00; /* Color de fondo del contador del carrito */
+    color: #fff; /* Color del texto del contador del carrito */
+    padding: 5px 10px; /* Relleno del contador del carrito */
+    border-radius: 50%; /* Bordes redondeados para el contador del carrito */
+  }
+
+  /* Estilo para la lista de productos en el carrito */
+  .cart-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Estilo para los elementos de la lista en el carrito */
+  .cart-list li {
+    margin-bottom: 5px; /* Espaciado entre elementos en la lista del carrito */
+  }
