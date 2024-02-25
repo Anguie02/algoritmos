@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Agrega los enlaces a los estilos de Bootstrap -->
+  <!-- Enlace a los estilos de Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Enlace a Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-9aD0zZtXXgJnJqLqIViVWgjjh8aWl/BYbMef5E8fX3n1qVCW6a7bXJB81jBbDr4Gv1RL/Z5ggpx+KqK5F/zpCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       background-color: #b2c9c9;
@@ -32,6 +34,14 @@
 
     footer {
       width: 100%;
+    }
+    .social-icons {
+      display: flex;
+    }
+
+    .social-icon {
+      margin-right: 10px;
+      color: #ffffff;
     }
 
     .carousel-indicators [data-bs-target]{
@@ -80,10 +90,15 @@
   </div>
 
   <footer class="navbar navbar-dark bg-dark mt-4">
-    <div class="container">
+    <div class="container d-flex justify-content-between align-items-center">
       <span class="navbar-text">
         © 2024 El Tornillo Feliz
       </span>
+      <div class="social-icons">
+        <a href="#" class="social-icon text-warning"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon text-primary"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:tucorreo@dominio.com" class="social-icon text-danger"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
   </footer>
 
