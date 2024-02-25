@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
@@ -11,7 +13,7 @@
             <div class="card">
                 <div class="card-body">
                     <h2 class="text-center">Login</h2>
-                    <form action="procesar_autenticacion.php" method="post">
+                    <form action="tu_script_de_autenticacion.php" method="post">
                         <div class="form-group">
                             <label for="correo">Correo electrónico:</label>
                             <input type="email" class="form-control" id="correo" name="correo" required>
@@ -27,5 +29,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <!-- Enlace a Bootstrap JS y Popper.js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
