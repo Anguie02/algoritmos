@@ -14,45 +14,55 @@
       
     </div>
   </nav>
-
+  
 <div class="container mt-4">
   <h2>Control de Pedidos</h2>
 
-  <!-- Primer botón desplegable -->
-  <div class="btn-group mt-3">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Productos Seleccionados
-    </button>
-    <div class="dropdown-menu">
-        <!-- Lista de productos seleccionados con cantidad y precio total -->
-        <ul id="selectedProducts" class="list-group mb-2">
-          <!-- Aquí se agregarán dinámicamente los productos -->
-        </ul>
-  
-        <!-- Formulario para ingresar cantidad y mostrar precio total -->
-        <form id="checkoutForm">
-          <div class="form-group">
-            <label for="totalPrice">Precio Total:</label>
-            <input type="text" class="form-control" id="totalPrice" readonly>
-          </div>
-        <button type="button" class="btn btn-success" id="payButton">Pagar</button>
-        <button type="button" class="btn btn-danger" id="cancelButton">Cancelar</button>
-      </form>
+  <div class="row mt-3">
+    <!-- Lado izquierdo con una foto -->
+    <div class="col-md-6">
+      <img src="tu-foto.jpg" class="img-fluid" alt="Foto">
     </div>
-  </div>
 
-  <!-- Segundo botón desplegable -->
-  <div class="btn-group mt-3">
-    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Pedidos por Recoger
-    </button>
-    <div class="dropdown-menu">
-      <!-- Lista de pedidos por recoger -->
-      <ul id="pickupOrders" class="list-group mb-2">
-        <li class="list-group-item">Pedido 1</li>
-        <li class="list-group-item">Pedido 2</li>
-        <!-- Agrega más elementos según sea necesario -->
-      </ul>
+    <!-- Lado derecho con los botones -->
+    <div class="col-md-6">
+      <!-- Primer botón desplegable -->
+      <div class="btn-group mt-3">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Productos Seleccionados
+        </button>
+        <div class="dropdown-menu">
+            <!-- Lista de productos seleccionados con cantidad y precio total -->
+            <ul id="selectedProducts" class="list-group mb-2">
+              <!-- Aquí se agregarán dinámicamente los productos -->
+            </ul>
+      
+            <!-- Formulario para ingresar cantidad y mostrar precio total -->
+            <form id="checkoutForm">
+              <div class="form-group">
+                <label for="totalPrice">Precio Total:</label>
+                <input type="text" class="form-control" id="totalPrice" readonly>
+              </div>
+            <button type="button" class="btn btn-success" id="payButton">Pagar</button>
+            <button type="button" class="btn btn-danger" id="cancelButton">Cancelar</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Segundo botón desplegable -->
+      <div class="btn-group mt-3">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Pedidos por Recoger
+        </button>
+        <div class="dropdown-menu">
+          <!-- Lista de pedidos por recoger -->
+          <ul id="pickupOrders" class="list-group mb-2">
+            <li class="list-group-item">Pedido 1</li>
+            <li class="list-group-item">Pedido 2</li>
+            <!-- Agrega más elementos según sea necesario -->
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
