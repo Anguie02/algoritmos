@@ -34,7 +34,7 @@
         $apellidos = $_POST["apellidos"];
         $dni = $_POST["dni"];
         $correo = $_POST["correo"];
-        $celular = $_POST["celular"];
+        $num_celular = $_POST["num_celular"];
         $contrasena = $_POST["contrasena"];
 
         // Hash de la contraseña
@@ -54,8 +54,8 @@
         }
 
         // Consulta preparada para insertar los datos en la base de datos
-        $stmt = $conn->prepare("INSERT INTO clientes (nombres, apellidos, dni, correo, celular, contrasena) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", $nombres, $apellidos, $dni, $correo, $celular, $hash_contrasena);
+        $stmt = $conn->prepare("INSERT INTO clientes (nombres, apellidos, dni, correo, num_celular, contrasena) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $nombres, $apellidos, $dni, $correo, $num_celular, $hash_contrasena);
 
         if ($stmt->execute()) {
             echo "<p>Registro exitoso</p>";
