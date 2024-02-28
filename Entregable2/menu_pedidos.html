@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferreteria EL TORNILLO  FELIZ</title>
+  <link rel="stylesheet" href="style_carrito.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <!-- Enlaces a los archivos CSS de Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body{
+      background-color: #b2c9c9;
+    }
+    /* Estilo personalizado para ajustar la altura del navbar */
+    .navbar-custom {
+      height: 80px; /* Puedes ajustar este valor según tus preferencias */
+    }
+    .navbar-brand {
+      font-family: 'Roboto', sans-serif; /* Aplica la fuente de Google Fonts al título del navbar */
+      font-size: 24px; /* Ajusta el tamaño del texto según tus preferencias */
+      font-weight: 700; /* Puedes ajustar el grosor de la fuente */
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark navbar-custom">
+    <div class="container">
+        <span class="navbar-brand mb-0 h1">EL TORNILLO FELIZ</span>
+        <div class="cart-container ml-auto">
+          <a href="carrito.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </a>
+      </div>
+</nav>
+
+<!-- Contenedor de las Cards -->
+<div class="container mt-4">
+
+    <!-- Cards -->
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Title 1</h5>
+            <p class="card-text">Contenido.</p>
+            <a href="#" class="btn btn-primary">Agregar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 2</h5>
+            <p class="card-text">Title 2</p>
+            <a href="#" class="btn btn-primary">Agregar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 3</h5>
+            <p class="card-text">Title 3</p>
+            <a href="#" class="btn btn-primary">Agregar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 4</h5>
+            <p class="card-text">Title 4</p>
+            <a href="#" class="btn btn-primary">Agregar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 5</h5>
+            <p class="card-text">Title 5</p>
+            <a href="#" class="btn btn-primary">Agregar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 6</h5>
+            <p class="card-text">Title 6</p>
+            <a href="#" class="btn btn-primary">Agregar</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+</div>
+
+<footer class="navbar navbar-dark bg-dark mt-4">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span class="navbar-text">
+      © 2024 El Tornillo Feliz
+    </span>
+    <div class="social-icons">
+      <a href="#" class="social-icon text-warning"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon text-primary"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:tucorreo@dominio.com" class="social-icon text-danger"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Variables para el carrito
+      let cartCount = 0;
+      const cartCountElement = document.querySelector('.cart-count');
+      const cartListElement = document.querySelector('.cart-list');
+
+      // Función para agregar productos al carrito
+      function addToCart(productTitle) {
+          cartCount++;
+          cartCountElement.textContent = cartCount;
+
+          // Agregar el producto a la lista del carrito
+          const listItem = document.createElement('li');
+          listItem.textContent = productTitle;
+          cartListElement.appendChild(listItem);
+      }
+
+      // Evento click para los botones "Agregar"
+      const addButtonElements = document.querySelectorAll('.btn-primary');
+      addButtonElements.forEach(function (button) {
+          button.addEventListener('click', function () {
+              const productTitle = this.parentNode.querySelector('.card-title').textContent;
+              addToCart(productTitle);
+          });
+      });
+  });
+</script>
+
+<!-- Enlaces a los archivos JS de Bootstrap y jQuery-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

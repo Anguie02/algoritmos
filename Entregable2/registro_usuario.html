@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <!-- Enlaces a los archivos CSS de Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      background-color: #f4f4f4;
+    }
+
+    .navbar-custom {
+      height: 80px;
+    }
+    .navbar-brand {
+      font-family: 'Roboto', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+    }
+
+    .custom-form {
+      width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .custom-form label {
+      margin-bottom: 8px;
+    }
+
+    .custom-form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+
+<!-- Navbav-->
+<nav class="navbar navbar-dark bg-dark navbar-custom">
+  <div class="container">
+    <span class="navbar-brand mb-0 h1">EL TORNILLO FELIZ</span>
+    
+  </div>
+</nav>
+
+<!-- Contenedor del formulario -->
+<div class="container mt-4 border p-4 custom-form flex-grow-1">
+  
+  <form action="procesar_registro.php" method="post">
+    <div class="form-group">
+      <label for="nombres">Nombre:</label>
+      <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Ingresa tu nombre">
+    </div>
+    <div class="form-group">
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos">
+    </div>
+    <div class="form-group">
+      <label for="dni">DNI:</label>
+      <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingresa tu DNI">
+    </div>
+    <div class="form-group">
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingresa tu correo electrónico">
+    </div>
+    <div class="form-group">
+      <label for="celular">Número de celular:</label>
+      <input type="tel" class="form-control" id="celular" name="num_celular" placeholder="Ingresa tu número de celular">
+    </div>
+    <div class="form-group">
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Ingresa una contraseña">
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+
+<footer class="navbar navbar-dark bg-dark mt-4">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span class="navbar-text">
+      © 2024 El Tornillo Feliz
+    </span>
+    <div class="social-icons">
+      <a href="#" class="social-icon text-warning"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon text-primary"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:tucorreo@dominio.com" class="social-icon text-danger"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Enlaces a los archivos JS de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
