@@ -35,6 +35,7 @@ class AsistenteVirtual:
         # Lógica para entrenar el modelo de recomendación (simulación)
         X = np.array([[0], [1], [2]])  # Ejemplo de características (pueden ser más complejas)
         y = np.array([0, 1, 2])  # Ejemplo de etiquetas (pueden ser categorías de productos)
+        self.modelo_recomendacion = DecisionTreeClassifier()
         self.modelo_recomendacion.fit(X, y)
 
     def recomendar_producto(self):
