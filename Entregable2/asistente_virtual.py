@@ -40,14 +40,14 @@ class AsistenteVirtual:
 
     def recomendar_producto(self):
         # Lógica para recomendar un producto utilizando el modelo de decisiones
-        if not hasattr(self, 'modelo_recomendacion'):
+        if self.modelo_recomendacion is None:
             self.entrenar_modelo_recomendacion()
 
         # Simulación de entrada de características del usuario para la recomendación
         caracteristicas_usuario = np.array([[1]])
-        recomendacion = self.modelo_recomendacion.predict(caracteristicas_usuario)[0]
+        recomendacion = self.modelo_recomendacion.predict(caracteristicas_usuario.reshape(1, -1))[0]
         return f"Te recomiendo el producto {recomendacion}. ¿Te gustaría agregarlo al carrito?"
-
+               
     def seguimiento_pedidos(self):
         if not self.pedidos:
             return "No tienes pedidos registrados aún."
