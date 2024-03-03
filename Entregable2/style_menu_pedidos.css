@@ -10,3 +10,34 @@ body{
     font-size: 24px; /* Ajusta el tamaño del texto según tus preferencias */
     font-weight: 700; /* Puedes ajustar el grosor de la fuente */
   }
+/* Estilo para el contenedor del asistente */
+#asistente-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: none; /* Inicialmente oculto */
+  }
+
+  /* Estilo para el botón de mostrar/ocultar asistente */
+  #mostrar-asistente-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Estilo para el área del chat */
+  #asistente-messages {
+    height: 80%;
+    overflow-y: scroll;
+  }
