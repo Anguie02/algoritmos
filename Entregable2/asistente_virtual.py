@@ -67,7 +67,7 @@ def enviar_mensaje():
 
 def procesar_mensaje_asistente(mensaje_usuario):
     tokens = asistente.procesar_mensaje_natural(mensaje_usuario)
-    return f"Asistente: Recibido mensaje - {', '.join(tokens)}"
+    return ' '.join(tokens)
 
 if __name__ == '__main__':
     app.run(debug=True)
