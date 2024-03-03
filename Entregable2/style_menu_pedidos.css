@@ -1,0 +1,12 @@
+body{
+    background-color: #b2c9c9;
+  }
+  /* Estilo personalizado para ajustar la altura del navbar */
+  .navbar-custom {
+    height: 80px; /* Puedes ajustar este valor según tus preferencias */
+  }
+  .navbar-brand {
+    font-family: 'Roboto', sans-serif; /* Aplica la fuente de Google Fonts al título del navbar */
+    font-size: 24px; /* Ajusta el tamaño del texto según tus preferencias */
+    font-weight: 700; /* Puedes ajustar el grosor de la fuente */
+  }
