@@ -154,6 +154,16 @@
           });
       });
   });
+  function toggleAsistente() {
+    const asistenteContainer = document.getElementById('asistente-container');
+
+    // Cambia la visibilidad del contenedor del asistente
+    if (asistenteContainer.style.display === 'none') {
+      asistenteContainer.style.display = 'block';
+    } else {
+      asistenteContainer.style.display = 'none';
+    }
+  }
 </script>
 
 <!-- Enlaces a los archivos JS de Bootstrap y jQuery-->
