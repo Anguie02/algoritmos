@@ -24,11 +24,11 @@
       </div>
 </nav>
 
-<!-- Botón para mostrar/ocultar el asistente -->
-<button id="mostrar-asistente-btn" onclick="toggleAsistente()">Tu Asistente</button>
+<button id="mostrar-asistente-btn" onclick="toggleAsistente()">A</button>
 
 <!-- Contenedor del asistente virtual -->
 <div id="asistente-container">
+  <button id="cerrar-asistente-btn" onclick="cerrarAsistente()">Cerrar</button>
   <div id="asistente-messages"></div>
   <input type="text" id="asistente-input" placeholder="Escribe aquí...">
   <button onclick="enviarMensajeAsistente()">Enviar</button>
@@ -154,6 +154,7 @@
           });
       });
   });
+  // Función para mostrar/ocultar el asistente
   function toggleAsistente() {
     const asistenteContainer = document.getElementById('asistente-container');
 
@@ -163,6 +164,12 @@
     } else {
       asistenteContainer.style.display = 'none';
     }
+  }
+
+  // Función para cerrar el asistente
+  function cerrarAsistente() {
+    const asistenteContainer = document.getElementById('asistente-container');
+    asistenteContainer.style.display = 'none';
   }
 </script>
 

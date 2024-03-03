@@ -13,7 +13,8 @@ body{
 /* Estilo para el contenedor del asistente */
 #asistente-container {
     position: fixed;
-    top: 0;
+    top: 100px;
+   
     right: 0;
     width: 300px;
     height: 300px;
@@ -23,22 +24,39 @@ body{
     overflow: hidden;
     display: none; /* Inicialmente oculto */
     z-index: 1000; /* Coloca el cuadro por encima de otros elementos */z-index: 1000; /* Coloca el cuadro por encima de otros elementos */
-  }
+    border-radius: 10px; /* Añade esquinas redondeadas */  
+}
+
 
   /* Estilo para el botón de mostrar/ocultar asistente */
   #mostrar-asistente-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #007bff;
+    bottom: 400px;
+    right: 80px; /* Ajusta la posición según tus preferencias */
+    width: 50px;
+    height: 50px;
+    background-color: #182736;
     color: #fff;
-    padding: 10px;
     border: none;
+    border-radius: 50%; /* Hace que el botón sea circular */
     cursor: pointer;
+    z-index: 999; /* Coloca el botón por encima del cuadro del asistente */
+    display: flex;
+    align-items: center;
+    justify-content: center; 
   }
 
   /* Estilo para el área del chat */
   #asistente-messages {
-    height: 80%;
+    height: 150px;
     overflow-y: scroll;
+  }
+
+  /* Estilo para el botón de cerrar */
+  #cerrar-asistente-btn {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
   }
