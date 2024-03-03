@@ -32,8 +32,10 @@
 <div id="asistente-container">
   <button id="cerrar-asistente-btn" onclick="cerrarAsistente()">Cerrar</button>
   <div id="asistente-messages"></div>
-  <input type="text" id="asistente-input" placeholder="Escribe aquí...">
-  <button onclick="enviarMensajeAsistente()">Enviar</button>
+  <form id="asistente-form">
+    <input type="text" id="asistente-input" placeholder="Escribe aquí...">
+    <button type="button" onclick="enviarMensajeAsistente()">Enviar</button>
+  </form>
 </div>
 
 <!-- Contenedor de las Cards -->
