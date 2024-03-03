@@ -1,7 +1,9 @@
-
+from flask import Flask, render_template, request, jsonify
 import spacy
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
+
+app = Flask(__name__)
 
 class AsistenteFerreteria:
     def __init__(self):
@@ -52,16 +54,20 @@ class AsistenteFerreteria:
 # Crear una instancia del asistente virtual
 asistente = AsistenteFerreteria()
 
-# Simular historial de compras
-historial_compras_simulado = ["Martillo", "Tornillos", "Sierra"]
-for compra in historial_compras_simulado:
-    asistente.agregar_al_carrito(compra, 1)
+#------------------
+@app.route('/')
+def index():
+    return render_template('menu_pedidos.html')
 
-# Realizar pedido y obtener recomendación
-respuesta_pedido = asistente.registrar_pedido()
-recomendacion = asistente.recomendar_producto()
+@app.route('/enviar_mensaje', methods=['POST'])
+def enviar_mensaje():
+    mensaje_usuario = request.form['mensaje_usuario']
+    respuesta_asistente = procesar_mensaje_asistente(mensaje_usuario)
+    return jsonify({"respuesta_asistente": respuesta_asistente})
 
-# Mostrar resultados
-print(f"Resultado del pedido: {respuesta_pedido}")
-print(f"Recomendación de producto: {recomendacion}")
-print(f"Seguimiento de pedidos: {asistente.seguimiento_pedidos()}")
+def procesar_mensaje_asistente(mensaje_usuario):
+    tokens = asistente.procesar_mensaje_natural(mensaje_usuario)
+    return f"Asistente: Recibido mensaje - {', '.join(tokens)}"
+
+if __name__ == '__main__':
+    app.run(debug=True)
