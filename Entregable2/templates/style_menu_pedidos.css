@@ -10,6 +10,28 @@ body{
     font-size: 24px; /* Ajusta el tamaño del texto según tus preferencias */
     font-weight: 700; /* Puedes ajustar el grosor de la fuente */
   }
+
+  /* Estilo para el contenedor del carrito en el navbar  */
+  .cart-container {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Color del texto del carrito */
+    font-size: 20px; /* Tamaño del texto del carrito */
+    margin-right: 20px; /* Espaciado a la derecha del carrito */
+  }
+
+  /* Estilo para el ícono del carrito */
+  .fa-shopping-cart {
+    margin-right: 5px; /* Espaciado entre el ícono y el contador del carrito */
+  }
+
+  /* Estilo para el contador del carrito */
+  .cart-count {
+    background-color: #f00; /* Color de fondo del contador del carrito */
+    color: #fff; /* Color del texto del contador del carrito */
+    padding: 5px 10px; /* Relleno del contador del carrito */
+    border-radius: 50%; /* Bordes redondeados para el contador del carrito */
+  }
 /* Estilo para el contenedor del asistente */
 #asistente-container {
     position: fixed;
@@ -18,7 +40,7 @@ body{
     right: 0;
     width: 300px;
     height: 300px;
-    background-color: #b33636;
+    background-color: #c0a0a0;
     border-left: 1px solid #cccccc;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
