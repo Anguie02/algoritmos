@@ -23,6 +23,17 @@
         </a>
       </div>
 </nav>
+
+<!-- Botón para mostrar/ocultar el asistente -->
+<button id="mostrar-asistente-btn" onclick="toggleAsistente()">Tu Asistente</button>
+
+<!-- Contenedor del asistente virtual -->
+<div id="asistente-container">
+  <div id="asistente-messages"></div>
+  <input type="text" id="asistente-input" placeholder="Escribe aquí...">
+  <button onclick="enviarMensajeAsistente()">Enviar</button>
+</div>
+
 <!-- Contenedor de las Cards -->
 <div class="container mt-4">
 
