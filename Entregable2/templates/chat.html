@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat con Asistente</title>
+  <style>
+    #chat-form {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      width: 300px; /* Ajusta el ancho según tus preferencias */
+      margin: auto; /* Centra el formulario en la página */
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-form">
+    <!-- Aquí se añadió el bloque de código -->
+    <div id="chat-container">
+      <div id="chat-messages"></div>
+      <input type="text" id="mensaje-usuario" placeholder="Escribe un mensaje...">
+      <button onclick="enviarMensaje()">Enviar</button>
+    </div>
+    <!-- Fin del bloque añadido -->
+  </div>
+
+  <script>
+    function enviarMensaje() {
+      var mensajeUsuario = document.getElementById('mensaje-usuario').value;
+      agregarMensaje('Tú', mensajeUsuario);
+
+      // Enviar mensaje al servidor
+      fetch('/enviar_mensaje', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'mensaje_usuario=' + encodeURIComponent(mensajeUsuario),
+      })
+      .then(response => response.json())
+      .then(data => {
+        var respuestaAsistente = data.respuesta_asistente;
+        agregarMensaje('Asistente', respuestaAsistente);
+      });
+    }
+
+    function agregarMensaje(emisor, mensaje) {
+      var chatMessages = document.getElementById('chat-messages');
+      chatMessages.innerHTML += '<p><strong>' + emisor + ':</strong> ' + mensaje + '</p>';
+    }
+  </script>
+</body>
+</html>
